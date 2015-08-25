@@ -1,6 +1,6 @@
 execute "yum -y update"
-#execute "rpm -Uvh http://ftp.iij.ad.jp/pub/linux/fedora/epel/6/x86_64/epel-release-6-8.noarch.rpm"
-#execute "rpm -ivh http://rpms.famillecollet.com/enterprise/remi-release-6.rpm"
+execute "rpm -Uvh http://ftp.iij.ad.jp/pub/linux/fedora/epel/6/x86_64/epel-release-6-8.noarch.rpm"
+execute "rpm -ivh http://rpms.famillecollet.com/enterprise/remi-release-6.rpm"
 
 package "httpd"
 package "mysql-server"
@@ -19,12 +19,12 @@ end
 
 execute "download and extract wordpress" do
   commands = [
-    #"mkdir /vagrant/www",
+    "mkdir /vagrant/www",
     "cd /vagrant/www/",
-    #"wget \"https://ja.wordpress.org/latest-ja.zip\"",
-    #"unzip latest-ja.zip",
-    #"rm -rf latest-ja.zip",
-    #"chown -R apache:apache wordpress"
+    "wget \"https://ja.wordpress.org/latest-ja.zip\"",
+    "unzip latest-ja.zip",
+    "rm -rf latest-ja.zip",
+    "chown -R apache:apache wordpress"
   ]
   command commands.join(" && ")
   user "root"
