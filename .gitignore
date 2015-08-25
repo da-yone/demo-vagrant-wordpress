@@ -1,5 +1,5 @@
 
-.bundle
 .vagrant
 .DS_Store
+vendor
 Gemfile.lock
