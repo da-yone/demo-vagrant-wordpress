@@ -48,5 +48,5 @@ end
   end
 end
 
-# execute "mysql -uroot -e \"SET PASSWORD=PASSWORD('root')\""
+execute "mysql -uroot -e \"SET PASSWORD=PASSWORD('root')\""
 execute "mysql -uroot -proot -e \"CREATE DATABASE IF NOT EXISTS wordpress character set utf8\""
